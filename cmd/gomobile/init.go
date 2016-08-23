@@ -467,7 +467,7 @@ func fetchNDK() error {
 }
 
 func fetchStrippedNDK() error {
-	url := "https://dl.google.com/go/mobile/gomobile-" + ndkVersion + "-" + goos + "-" + ndkarch + ".tar.gz"
+	url := "https://dl.google.com/go/mobile/gomobile-" + ndkVersion + "-" + goos + "-" + "x86_64" + ".tar.gz"
 	archive, err := fetch(url)
 	if err != nil {
 		return err
@@ -476,7 +476,7 @@ func fetchStrippedNDK() error {
 }
 
 func fetchFullNDK() error {
-	url := "https://dl.google.com/android/repository/android-" + ndkVersion + "-" + goos + "-" + ndkarch + ".zip"
+	url := "https://dl.google.com/android/repository/android-" + ndkVersion + "-" + goos + "-" + "ndkarch" + ".zip"
 	archive, err := fetch(url)
 	if err != nil {
 		return err
